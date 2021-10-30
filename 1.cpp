@@ -931,3 +931,75 @@ int main()
 
     return 0;
 }
+// add one more
+// C++ program to illustrate the
+// function of vector in C++
+#include <iostream>
+
+// Header file for vector if
+// <bits/stdc++.h> not included
+#include <vector>
+using namespace std;
+
+// Function to print the vector
+void print(vector<int> vec)
+{
+
+	// vec.size() gives the size
+	// of the vector
+	for (int i = 0; i < vec.size(); i++) {
+		cout << vec[i] << " ";
+	}
+
+	cout << endl;
+}
+
+// Driver Code
+int main()
+{
+	// Defining a vector
+	vector<int> vec;
+
+	// Put all natural numbers
+	// from 1 to 10 in vector
+	for (int i = 1; i <= 10; i++) {
+		vec.push_back(i);
+	}
+
+	cout << "Initial vector: ";
+
+	// print the vector
+	print(vec);
+
+	// Size of vector
+	cout << "Vector size: " << vec.size() << "\n";
+
+	// Check of vector is empty
+	if (vec.empty() == false)
+		cout << "Is vector is"
+			<< " empty: False\n";
+
+	// Popping out 10 form the vector
+	vec.pop_back();
+	cout << "Vector after popping: ";
+	print(vec);
+
+	// Deleting the first element
+	// from the vector using erase()
+	vec.erase(vec.begin());
+	cout << "Vector after erase"
+		<< " first element: ";
+	print(vec);
+
+	// Clear the vector
+	vec.clear();
+	cout << "Vector after "
+		<< "clearing: None ";
+	print(vec);
+
+	// Check if vector is empty
+	if (vec.empty() == true)
+		cout << "Is vector is"
+			<< " empty: True\n";
+}
+
